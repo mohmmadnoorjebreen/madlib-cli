@@ -1,5 +1,5 @@
 import re
-print('welcome to your future game\n Fill in the following information in brackets')
+print('welcome to your future game')
 
 def read_template(paths):
     try:
@@ -28,10 +28,13 @@ def merge(stripped:str,parts):
   
 
 def user_game():
-    data = input('plz enter all missing word') 
-    data_list=data.split(' ')
+    input_msg = 'Please enter a series of words so that they fit between the brackets above.Please follow these instructions: \n  Enter an Adjective , twice \n Enter a noun \n Enter verb\n Enter a noun \n Enter an Adjective , twice\n Enter a noun , four times \n  Enter an Adjective  \n Enter a noun\n  Enter an Adjective  \n Enter a noun  \n Enter a number \n Enter a noun \n Enter a number \n Enter a noun    '
+    
     with open('assets/madlib.txt ' ,'r') as file:
         new_file = file.read()
+        print(new_file)
+        data = input(input_msg) 
+        data_list=data.split(' ')
         with open('assets/completed .txt' , 'w') as file:
             new_string=re.sub("\{.*?\}","{}",new_file)
             new_file = merge(new_string,tuple(data_list))
@@ -41,7 +44,7 @@ def user_game():
         print(new_file)   
     
 # it work but i put it in this way because of pytest: reading from stdin while output is captured!
-#user_game()   
+user_game()   
 
 
 
