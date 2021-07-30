@@ -28,7 +28,7 @@ def merge(stripped:str,parts):
   
 
 def user_game():
-    input_msg = 'Please enter a series of words so that they fit between the brackets above.Please follow these instructions: \n  Enter an Adjective , twice \n Enter a noun \n Enter verb\n Enter a noun \n Enter an Adjective , twice\n Enter a noun , four times \n  Enter an Adjective  \n Enter a noun\n  Enter an Adjective  \n Enter a noun  \n Enter a number \n Enter a noun \n Enter a number \n Enter a noun    '
+    input_msg = 'Please enter a series of words so that they fit between the brackets above.Please follow these instructions: \n  Adjective: you must enter an adjective that fits the context. Be careful, you must enter six adjectives (without a sequence)\nA First Name:\n you must enter a A First Name (Choose a name you like) that fits the context. Be careful, you must enter tow First Name (without a sequence)\n Plural Noun :  \n you must enter a Plural Noun (Choose what you see fit the context). Be careful, you must enter five Plural Noun (without a sequence)\n Large Animal and Small Animal \n You must enter a large animal and a small animal, in turn \n number: \n you must enter number , Pay attention, one of the numbers must be between 1-50'
     
     with open('assets/madlib.txt ' ,'r') as file:
         new_file = file.read()
